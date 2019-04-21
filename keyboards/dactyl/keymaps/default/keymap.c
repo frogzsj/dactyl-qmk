@@ -40,7 +40,6 @@ enum custom_keycodes {
 // ==>
 
 // Modifiers (L -> R) <==
-#define KC_ADJT   MO(_ADJUST)
 #define KC_MOUSE  MO(_MOUSE)
 #define KC_NUMP   LT(_NPNUMS, KC_DELETE)
 #define KC_NPSY   MO(_NPSYMB)
