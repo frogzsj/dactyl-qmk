@@ -24,8 +24,7 @@ enum custom_keycodes {
 #define KC_LBRAK KC_LBRACKET
 #define KC_RBRAK KC_RBRACKET
 
-#define KC_ALTTAB   LALT(KC_TAB)
-#define KC_CTLESC   LCTL(KC_ESC)
+#define KC_ALTESC   LALT(KC_ESC)
 #define KC_COPYPS   LGUI(LSFT(LCTL(KC_4)))  // Copy portion of screen
 #define KC_HREFSH   LGUI(LSFT(KC_R))        // Hard refresh
 #define KC_SWAPW    LGUI(KC_GRV)            // Cmd + ` , swithch window
@@ -48,9 +47,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = KEYMAP_6x6(
   // LEFT HAND                                      RIGHT HAND
   //,------+------+------+------+------+------,    ,------+------+------+------+------+------,
-     ALTTAB,   Q  ,   W  ,   E  ,   R  ,   T  ,        Y  ,   U  ,   I  ,   O  ,   P  ,BSLASH,
+      TAB  ,   Q  ,   W  ,   E  ,   R  ,   T  ,        Y  ,   U  ,   I  ,   O  ,   P  ,BSLASH,
   //|------+------+------+------+------+------|    |------+------+------+------+------+------|
-     CTLESC,   A  ,   S  ,   D  ,   F  ,   G  ,        H  ,   J  ,   K  ,   L  ,SCOLON, QUOTE,
+     ALTESC,   A  ,   S  ,   D  ,   F  ,   G  ,        H  ,   J  ,   K  ,   L  ,SCOLON, QUOTE,
   //|------+------+------+------+------+------|    |------+------+------+------+------+------|
       LSPO ,   Z  ,   X  ,   C  ,   V  ,   B  ,        N  ,   M  , COMMA,  DOT , SLASH, RSPC ,
   //`------+------,------+------,------+------'    `------+------,------+------,------+------'
