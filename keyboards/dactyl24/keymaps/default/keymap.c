@@ -24,7 +24,8 @@ enum custom_keycodes {
 #define KC_LBRAK KC_LBRACKET
 #define KC_RBRAK KC_RBRACKET
 
-#define KC_ALTESC   LALT(KC_ESC)
+#define KC_ALTTAB   ALT_T(KC_TAB)
+#define KC_CTLESC   CTL_T(KC_ESC)
 #define KC_COPYPS   LGUI(LSFT(LCTL(KC_4)))  // Copy portion of screen
 #define KC_HREFSH   LGUI(LSFT(KC_R))        // Hard refresh
 #define KC_SWAPW    LGUI(KC_GRV)            // Cmd + ` , swithch window
@@ -34,6 +35,7 @@ enum custom_keycodes {
 
 #define KC_NUMPDL   LT(_NPNUMS, KC_DELETE)
 #define KC_ZYMBOL   MO(_NPSYMB)
+#define KC_ZYMLBK   LT(_NPSYMB, KC_LBRACKET)
 #define KC_ARWSPC   LT(_ARROWS, KC_SPACE)
 #define KC_MSEGRV   LT(_MOUSE, KC_GRAVE)
 // ==>
@@ -47,20 +49,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = KEYMAP_6x6(
   // LEFT HAND                                      RIGHT HAND
   //,------+------+------+------+------+------,    ,------+------+------+------+------+------,
-      TAB  ,   Q  ,   W  ,   E  ,   R  ,   T  ,        Y  ,   U  ,   I  ,   O  ,   P  ,BSLASH,
+     ALTTAB,   Q  ,   W  ,   E  ,   R  ,   T  ,        Y  ,   U  ,   I  ,   O  ,   P  ,BSLASH,
   //|------+------+------+------+------+------|    |------+------+------+------+------+------|
-     ALTESC,   A  ,   S  ,   D  ,   F  ,   G  ,        H  ,   J  ,   K  ,   L  ,SCOLON, QUOTE,
+     CTLESC,   A  ,   S  ,   D  ,   F  ,   G  ,        H  ,   J  ,   K  ,   L  ,SCOLON, QUOTE,
   //|------+------+------+------+------+------|    |------+------+------+------+------+------|
       LSPO ,   Z  ,   X  ,   C  ,   V  ,   B  ,        N  ,   M  , COMMA,  DOT , SLASH, RSPC ,
   //`------+------,------+------,------+------'    `------+------,------+------,------+------'
                     LEFT , RIGHT,                                  DOWN ,  UP  ,
   //              `------+------'                                `------+------'
   //                         ,------+------,            ,------+------,
-                              LBRAK , GUIBS,             ARWSPC, RBRAK,
+                              GUIBS ,NUMPDL,             CTLRET,ARWSPC,
   //                         |------+------|            |------+------|
-                              HREFSH,NUMPDL,             CTLRET, EQUAL,
+                               MINUS,ZYMLBK,              RBRAK, EQUAL,
   //                         |------+------|            |------+------|
-                              COPYPS,ZYMBOL,             MSEGRV, MINUS
+                              COPYPS,XXXXXX,             MSEGRV,HREFSH
   //                         `------+------'            `------+------'
   ),
 
@@ -76,11 +78,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          ,      ,                                    0  , PDOT ,
   //              `------+------'                                `------+------'
   //                         ,------+------,            ,------+------,
-                              LCBR  , GUIBS,              SPACE, RCBR ,
+                              GUIBS ,XXXXXX,             CTLRET, SPACE,
   //                         |------+------|            |------+------|
-                              HREFSH,XXXXXX,             CTLRET, PLUS,
+                                UNDS,  LCBR,               RCBR, PLUS,
   //                         |------+------|            |------+------|
-                              COPYPS,XXXXXX,              TILDE, UNDS
+                              COPYPS,XXXXXX,              TILDE,HREFSH
   //                         `------+------'            `------+------'
   ),
 
@@ -96,11 +98,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          ,      ,                                       ,      ,
   //              `------+------'                                `------+------'
   //                         ,------+------,            ,------+------,
-                              LCBR  , GUIBS,              SPACE, RCBR ,
+                              GUIBS ,DELETE,             CTLRET, SPACE,
   //                         |------+------|            |------+------|
-                              HREFSH,DELETE,             CTLRET, PLUS,
+                               UNDS ,XXXXXX,               RCBR, PLUS,
   //                         |------+------|            |------+------|
-                              COPYPS,XXXXXX,              TILDE, UNDS
+                              COPYPS,XXXXXX,              TILDE,HREFSH
   //                         `------+------'            `------+------'
   ),
 
@@ -116,11 +118,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                          ,      ,                                       ,      ,
   //              `------+------'                                `------+------'
   //                         ,------+------,            ,------+------,
-                              LCBR  , GUIBS,             XXXXXX, RCBR ,
+                               GUIBS,DELETE,             CTLRET,XXXXXX,
   //                         |------+------|            |------+------|
-                              HREFSH,DELETE,             CTLRET, PLUS,
+                               UNDS ,  LCBR,               RCBR, PLUS,
   //                         |------+------|            |------+------|
-                              COPYPS,XXXXXX,              TILDE, UNDS
+                              COPYPS,XXXXXX,              TILDE,HREFSH
   //                         `------+------'            `------+------'
   ),
 
