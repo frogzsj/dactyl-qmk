@@ -55,14 +55,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|    |------+------+------+------+------+------|
       LSPO ,   Z  ,   X  ,   C  ,   V  ,   B  ,        N  ,   M  , COMMA,  DOT , SLASH, RSPC ,
   //`------+------,------+------,------+------'    `------+------,------+------,------+------'
-                    LEFT , RIGHT,                                  DOWN ,  UP  ,
+                   HREFSH,COPYPS,                                  MINUS,EQUAL,
   //              `------+------'                                `------+------'
   //                         ,------+------,            ,------+------,
                               GUIBS ,NUMPDL,             CTLRET,ARWSPC,
   //                         |------+------|            |------+------|
                                MINUS,ZYMLBK,              RBRAK, EQUAL,
   //                         |------+------|            |------+------|
-                              COPYPS,XXXXXX,             MSEGRV,HREFSH
+                              XXXXXX,XXXXXX,             MSEGRV,HREFSH
   //                         `------+------'            `------+------'
   ),
 
